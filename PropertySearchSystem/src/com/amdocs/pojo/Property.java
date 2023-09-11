@@ -15,15 +15,15 @@ public class Property {
     // Constructor to initialize a Property object
     public Property(int propertyId, String noOfRooms, float areaInSqft, int floorNo, String city, String state,
             float cost, String ownerName, String ownerContactNo) {
-        this.propertyId = propertyId;
-        this.noOfRooms = noOfRooms;
-        this.areaInSqft = areaInSqft;
-        this.floorNo = floorNo;
-        this.city = city;
-        this.state = state;
-        this.cost = cost;
-        this.ownerName = ownerName;
-        this.ownerContactNo = ownerContactNo;
+        setPropertyId(propertyId);
+        setNoOfRooms(noOfRooms);
+        setAreaInSqft(areaInSqft);
+        setFloorNo(floorNo);
+        setCity(city);
+        setState(state);
+        setCost(cost);
+        setOwnerName(ownerName);
+        setOwnerContactNo(ownerContactNo);
     }
 
     // Getter and Setter methods for each property field

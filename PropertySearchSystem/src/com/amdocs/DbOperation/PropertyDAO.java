@@ -56,7 +56,7 @@ public class PropertyDAO {
 	        }
 	    }
 
-	    public boolean updatePropertyCost(int propertyId, double newCost) throws PropertySearchException {
+	    public boolean updatePropertyCost(int propertyId, float newCost) throws PropertySearchException {
 	        String sql = "UPDATE PROPERTY SET cost = ? WHERE property_id = ?";
 	        try (PreparedStatement statement = connection.prepareStatement(sql)) {
 	            statement.setDouble(1, newCost);
@@ -106,6 +106,5 @@ public class PropertyDAO {
 	    }
 
 	    public void close() {
-	        DatabaseConnection.closeConnection();
 	    }
 	}

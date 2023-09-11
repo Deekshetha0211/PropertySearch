@@ -115,9 +115,12 @@ public class Main {
                     propertydao = new PropertyDAO();
                     try {
             			int r = propertydao.deleteProperty(propertyId);
-            			if (r!=-1)
+            			if (r!=0)
             			{
             				System.out.println("Property Deleted successfully");
+            			}
+            			else {
+            				System.out.println("Property not found");
             			}
             		} catch (PropertySearchException e) {
             			// TODO Auto-generated catch block
@@ -190,6 +193,10 @@ public class Main {
             				}
             				
             			}
+            			else
+            			{
+            				System.out.println("No properties found in the specified cost range");
+            			}
             		} catch (PropertySearchException e) {
             			// TODO Auto-generated catch block
             			e.printStackTrace();
@@ -217,6 +224,11 @@ public class Main {
             				}
             				
             			}
+            			else
+            			{
+            				System.out.println("No properties found in the specified requirement");
+            			}
+            			
             		} catch (PropertySearchException e) {
             			// TODO Auto-generated catch block
 //            			e.printStackTrace();
