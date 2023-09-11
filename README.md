@@ -1,13 +1,13 @@
 # Property Search System
 ## 1. Introduction
-* Purpose of the Document
+### Purpose of the Document
 The purpose of this document is to provide an overview of the Property Search System project developed using Core Java. It outlines the system's requirements, architecture, features, user interface.
 
-* Project Overview
+### Project Overview
 The Property Search System is a console-based application that allows users to perform various property search activities such as property details management, view all properties, search properties by city, cost and more. The system aims to provide user-friendly interface for property owners and buyers to access their property details and search it as per requirement.
 Note: for core java track participants will do this project as console-based menu driven code.
 
-* Scope
+### Scope
 The scope of the Property Search System project includes the following functionalities:
 - Property management (add, update, delete properties).
 - View all properties available for sale.
@@ -16,7 +16,7 @@ The scope of the Property Search System project includes the following functiona
 
 ## 2. System Requirements
 
-* Functional Requirements
+### Functional Requirements
 1. Property Management: Users should be able to add, update, and delete their property details.
 2. View All: Users should be able to view all properties available for sale.
 3. Search by city: Users should be able to search properties by city.
