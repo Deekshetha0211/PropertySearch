@@ -23,7 +23,7 @@ The scope of the Property Search System project includes the following functiona
 4. Search by cost range: Users should be able to search properties by cost range(between min and max cost)
 5. Search by no of rooms and city: Users should be able to search properties by number of rooms (1BHK/2BHK) as well as city
 
-## 4. User Interface
+## 3. User Interface
 The Property Search System should have menu to select operation to perform. Wherever search operation doesn’t return any result, show appropriate message. E.g., If for given city property doesn’t exist , show message “Property not available”.
 Menu should have below options
 Enter your choice:
@@ -37,8 +37,8 @@ Enter your choice:
 8. Exit
 After user selects one option, take input from user wherever applicable. E.g. If option 6 is selected, application should ask to enter city name and then show result.
 
-## 5. Technologies Used
+## 4. Technologies Used
 Core Java, JDBC, Oracle
 
-## 6. Conclusion
+## 5. Conclusion
 The Property Search System will help property owner to advertise their properties for sale  and buyers can search it as per their requirement.
