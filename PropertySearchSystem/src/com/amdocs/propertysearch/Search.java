@@ -22,7 +22,7 @@ public class Search {
         connection = DatabaseConnection.getConnection();
     }
     
-    // Helper method to map ResultSet to Property object
+    // Helper method to map ResultSet to Property object (List returning)
     private Property mapResultSetToProperty(ResultSet resultSet) throws SQLException {
         int propertyId = resultSet.getInt("property_id");
         String noOfRooms = resultSet.getString("no_of_rooms");

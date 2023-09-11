@@ -83,8 +83,7 @@ public class Main {
             				System.out.println("Property Added successfully");
             			}
             		} catch (PropertySearchException e) {
-            			// TODO Auto-generated catch block
-            			e.printStackTrace();
+            			System.out.println("Property cannot be added");
             		}
                 	break;
                 case 2:
@@ -101,9 +100,13 @@ public class Main {
             			if (r){
             				System.out.println("Property Updated successfully");
             			}
+            			else
+            			{
+            				System.out.println("Property cannot be updated");
+            			}
             		} catch (PropertySearchException e) {
-            			// TODO Auto-generated catch block
-            			e.printStackTrace();
+            			System.out.println("Property cannot be updated");
+            
             		}
                 	break;
                 case 3:
@@ -123,8 +126,7 @@ public class Main {
             				System.out.println("Property not found");
             			}
             		} catch (PropertySearchException e) {
-            			// TODO Auto-generated catch block
-            			e.printStackTrace();
+            			System.out.println("Property not found");
             		}
                     break;
                 case 4:
@@ -147,8 +149,8 @@ public class Main {
             				
             			}
             		} catch (PropertySearchException e) {
-            			// TODO Auto-generated catch block
-            			e.printStackTrace();
+            			
+            			System.out.println(e);
             		}
                     search.close();
                     break;
@@ -169,8 +171,7 @@ public class Main {
             				
             			}
             		} catch (PropertySearchException e) {
-            			// TODO Auto-generated catch block
-            			e.printStackTrace();
+            			System.out.println("Property not found");
             		}
                     break;
                 case 6:
@@ -198,8 +199,8 @@ public class Main {
             				System.out.println("No properties found in the specified cost range");
             			}
             		} catch (PropertySearchException e) {
-            			// TODO Auto-generated catch block
-            			e.printStackTrace();
+            			System.out.println("Property not found");
+            		
             		}
                     search.close();
                     break;
@@ -230,8 +231,8 @@ public class Main {
             			}
             			
             		} catch (PropertySearchException e) {
-            			// TODO Auto-generated catch block
-//            			e.printStackTrace();
+            			
+            			System.out.println("Property not found");
             		}
                     search.close();
                     break;

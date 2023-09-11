@@ -61,7 +61,7 @@ public class PropertyDAO {
 	        try (PreparedStatement statement = connection.prepareStatement(sql)) {
 	            statement.setDouble(1, newCost);
 	            statement.setInt(2, propertyId);
-	            return statement.executeUpdate() > 0;
+	            return statement.executeUpdate() > 0; 
 	        } catch (SQLException e) {
 	            e.printStackTrace();
 	            System.out.println("Property is not found");
