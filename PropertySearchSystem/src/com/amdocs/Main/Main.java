@@ -5,6 +5,7 @@ import com.amdocs.exception.PropertySearchException;
 import com.amdocs.pojo.Property;
 import com.amdocs.propertysearch.Search;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -40,18 +41,19 @@ public class Main {
             System.out.println("6. Find by cost");
             System.out.println("7. Find by no. of rooms and city");
             System.out.println("8. Exit");
-
+     
             int choice = scanner.nextInt();
             
             switch (choice) {
                 case 1:
+                	try {
                     // Add new property
                     // Read property details from the user and call propertyDAO.addProperty
                 	System.out.print("Enter property ID:");
                 	propertyId = scanner.nextInt();
                 	
                 	System.out.print("Enter the no of roooms (in terms of BHK):");
-                	noOfRooms = scanner.next();
+                	noOfRooms = scanner.next().toUpperCase();
                     
                 	System.out.print("Enter the area in sqft:");
                     areaInSqft = scanner.nextFloat();
@@ -63,18 +65,18 @@ public class Main {
                     city = scanner.next().toUpperCase();
                     
                     System.out.print("Enter the state:");
-                    state = scanner.next();
+                    state = scanner.next().toUpperCase();
                     
                     System.out.print("Enter the cost:");
                     cost = scanner.nextFloat();
                     
                     System.out.print("Enter the owner name:");
-                    ownerName = scanner.next();
+                    ownerName = scanner.next().toUpperCase();
                     
                     System.out.print("Enter owner contact number:");
                     ownerContactNo = scanner.next();
-  
-                	propertydao = new PropertyDAO();
+                    
+                    propertydao = new PropertyDAO();
                     property = new Property(propertyId,noOfRooms,areaInSqft,floorNo,city,state,cost,ownerName,ownerContactNo);
                     System.out.println(property.toString());
                     try {
@@ -85,6 +87,12 @@ public class Main {
             		} catch (PropertySearchException e) {
             			System.out.println("Property cannot be added");
             		}
+                	}
+                	catch(InputMismatchException e) {
+                		System.out.println("Enter a number not string");
+                		 scanner.nextLine();
+                	}
+
                 	break;
                 case 2:
                     // Update property cost
@@ -208,7 +216,7 @@ public class Main {
                     // Find by no of rooms and city
                     // Read number of rooms and city from the user and call propertyDAO.searchByNoOfRoomsAndCity
                 	System.out.print("Enter the no of roooms (in terms of BHK):");
-                	noOfRooms = scanner.next();
+                	noOfRooms = scanner.next().toUpperCase();
                 	System.out.print("Enter the city:");
                 	city = scanner.next().toUpperCase();
                     
@@ -245,7 +253,8 @@ public class Main {
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
-            } 
+            }
+        	
         }
     }
 }

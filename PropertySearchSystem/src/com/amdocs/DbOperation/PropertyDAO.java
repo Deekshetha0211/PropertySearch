@@ -88,7 +88,7 @@ public class PropertyDAO {
 	        return properties;
 	    }
 
-	    private Property mapResultSetToProperty(ResultSet resultSet) throws SQLException {
+	    private Property mapResultSetToProperty(ResultSet resultSet) throws SQLException { 
 	      
 	        int propertyId = resultSet.getInt("property_id");
 	        String noOfRooms = resultSet.getString("no_of_rooms");
