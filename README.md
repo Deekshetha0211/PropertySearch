@@ -5,7 +5,7 @@ The purpose of this document is to provide an overview of the Property Search Sy
 
 ### Project Overview
 The Property Search System is a console-based application that allows users to perform various property search activities such as property details management, view all properties, search properties by city, cost and more. The system aims to provide user-friendly interface for property owners and buyers to access their property details and search it as per requirement.
-Note: for core java track participants will do this project as console-based menu driven code.
+#### Note: for core java track participants will do this project as console-based menu driven code.
 
 ### Scope
 The scope of the Property Search System project includes the following functionalities:
