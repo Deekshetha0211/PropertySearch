@@ -12,7 +12,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         PropertyDAO propertyDAO = new PropertyDAO();
-        @SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
         int propertyId;
         String noOfRooms;
@@ -97,6 +96,7 @@ public class Main {
                 case 2:
                     // Update property cost
                     // Read property ID and new cost from the user and call propertyDAO.updatePropertyCost
+                	try {
                 	System.out.print("Enter property ID:");
                 	propertyId = scanner.nextInt();
                     
@@ -116,10 +116,16 @@ public class Main {
             			System.out.println("Property cannot be updated");
             
             		}
+                	}
+                	catch(InputMismatchException e) {
+                		System.out.println("Enter a number not string");
+                		 scanner.nextLine();
+                	}
                 	break;
                 case 3:
                     // Delete property
                     // Read property ID from the user and call propertyDAO.deleteProperty
+                	try {
                 	System.out.print("Enter property ID:");
                 	propertyId = scanner.nextInt();
                     
@@ -136,6 +142,11 @@ public class Main {
             		} catch (PropertySearchException e) {
             			System.out.println("Property not found");
             		}
+            }
+        	catch(InputMismatchException e) {
+        		System.out.println("Enter a number not string");
+        		 scanner.nextLine();
+        	}
                     break;
                 case 4:
                     // Find by city
